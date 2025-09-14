@@ -44,15 +44,8 @@ lev_low_gdp <- data %>% filter(GDP <= median_gdp) %>% pull(life_expectancy)
 # high gdp quartiles
 
 lev_high_gdp <- data %>% filter(GDP > median_gdp) %>% pull(life_expectancy)
-# print(lev_high_gdp)
 
-# plot low gdp histogram
-hist(lev_low_gdp)
-
-# plot high gdp histogram
-hist(lev_high_gdp)
-
-# export plots
+# generate and export plots
 png("hist_low_gdp.png", 1000, 700)
 hist(lev_low_gdp, col = 'red')
 dev.off()
