@@ -9,7 +9,6 @@ data <- read_csv("country_data.csv")
 print(head(data))
 
 # life expectancy
-
 life_expectancy <- data %>% pull(life_expectancy)
 
 # life expectancy quartiles
@@ -31,11 +30,9 @@ low_gdp <- data %>%  filter(GDP <= median_gdp)
 high_gdp <- data %>% filter(GDP > median_gdp)
 
 # low gdp quartiles
-
 lev_low_gdp <- data %>% filter(GDP <= median_gdp) %>% pull(life_expectancy)
 
 # high gdp quartiles
-
 lev_high_gdp <- data %>% filter(GDP > median_gdp) %>% pull(life_expectancy)
 
 # generate and export plots
